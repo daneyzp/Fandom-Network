@@ -1,0 +1,31 @@
+{
+  "servers": [
+    {
+      "id": "server1",
+      "title": "Fandom Network",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReU3r4-PFS-cjnZK9Xi1-IjCeBvXJco3lFlwxEliy2iw&s=10",
+      "ip": "fandomnetwork.sdlf.fun",
+      "port": "25565",
+      "url": "/server/server1.html",
+      "tags": "java, bedrock, survival, 1.21.11, paper"
+    }
+    ,{
+      "id": "server2",
+      "title": "BlossomCraft Minecraft Server",
+      "image": "https://crisps.minecraft.buzz/favicons/2711.png?v=5",
+      "ip": "buzz.blossomcraft.org",
+      "port": "19132",
+      "url": "/server/server2.html",
+      "tags": "java, survival, velocity, 1.7.2, 26.1.2"
+    }
+    ,{
+      "id": "server3",
+      "title": "LemonCloud Minecraft Server",
+      "image": "https://crisps.minecraft.buzz/favicons/3096.png?v=2",
+      "ip": "buzz.lemoncloud.org",
+      "port": "19132",
+      "url": "/server/server3.html",
+      "tags": "java, survival, 1.20, 26.1, paper"
+    }
+  ]
+}
