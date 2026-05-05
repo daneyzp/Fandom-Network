@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "id": "product1",
+      "title": "SkyPvP Plugin Pack",
+      "image": "https://via.placeholder.com/400x250",
+      "tags": "plugin, pvp, spigot",
+      "category": "plugin",
+      "label": "free",
+      "price": "0",
+      "download": "https://example.com/download/skypvp.zip",
+      "url": "/store/product1.html"
+    },
+    {
+      "id": "product2",
+      "title": "Premium Lobby Build",
+      "image": "https://via.placeholder.com/400x250",
+      "tags": "build, lobby, premium",
+      "category": "build",
+      "label": "paid",
+      "price": "200",
+      "download": "https://example.com/pay/lobby",
+      "url": "/store/product2.html"
+    }
+  ]
+}
