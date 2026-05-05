@@ -9,23 +9,6 @@
       "url": "https://daneyzp.github.io/Fandom-Network/server/server1.html",
       "tags": "java, bedrock, survival, 1.21.11, paper"
     }
-    ,{
-      "id": "server2",
-      "title": "BlossomCraft Minecraft Server",
-      "image": "https://crisps.minecraft.buzz/favicons/2711.png?v=5",
-      "ip": "buzz.blossomcraft.org",
-      "port": "19132",
-      "url": "https://daneyzp.github.io/Fandom-Network/server/server2.html",
-      "tags": "java, survival, velocity, 1.7.2, 26.1.2"
-    }
-    ,{
-      "id": "server3",
-      "title": "LemonCloud Minecraft Server",
-      "image": "https://crisps.minecraft.buzz/favicons/3096.png?v=2",
-      "ip": "buzz.lemoncloud.org",
-      "port": "19132",
-      "url": "https://daneyzp.github.io/Fandom-Network/server/server3.html",
-      "tags": "java, survival, 1.20, 26.1, paper"
-    }
+   
   ]
 }
