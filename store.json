@@ -4,8 +4,8 @@
       "id": "product1",
       "title": "SkyPvP Plugin Pack",
       "image": "https://www.9minecraft.net/wp-content/uploads/2018/06/SkyPvP-Map-Thumbnail.jpg",
-      "tags": "plugin, pvp, spigot, 26.1.2, 1.20.1",
-      "category": "plugin",
+      "tags": "map, pvp, 26.1.2, 1.20.1",
+      "category": "map",
       "label": "free",
       "price": "0",
       "download": "https://files.cdn9mc.com/index.php?act=download&id=1530148386&hash=69f9ed5a32512",
@@ -20,7 +20,7 @@
       "label": "paid",
       "price": "200",
       "download": "https://example.com/pay/lobby",
-      "url": "https://daneyzp.github.io/Fandom-Network//store/product2.html"
+      "url": "https://daneyzp.github.io/Fandom-Network/store/product2.html"
     }
   ]
 }
