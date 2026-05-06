@@ -1,7 +1,7 @@
 {
   "servers": [
     {
-      "id": "server1",
+      "id": "fandom-network",
       "title": "Fandom Network",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReU3r4-PFS-cjnZK9Xi1-IjCeBvXJco3lFlwxEliy2iw&s=10",
       "ip": "fandomnetwork.sdlf.fun",
