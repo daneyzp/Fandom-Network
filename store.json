@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": "product1",
+      "id": "skypvp",
       "title": "SkyPvP Plugin Pack",
       "image": "https://www.9minecraft.net/wp-content/uploads/2018/06/SkyPvP-Map-Thumbnail.jpg",
       "tags": "map, pvp, 26.1.2, 1.20.1",
@@ -12,7 +12,7 @@
       "url": "https://daneyzp.github.io/Fandom-Network/store/product1.html"
     },
  {
-      "id": "greenfieldcity",
+      "id": "greenfield-city",
       "title": "Green Field City",
       "image": "https://www.9minecraft.net/wp-content/uploads/2016/09/Greenfield-Map-Thumbnail.jpg",
       "tags": "600MB, build, world,26.1.2, 1.20.1",
@@ -23,7 +23,7 @@
       "url": "https://daneyzp.github.io/Fandom-Network/store/greenfieldcity.html"
     },
  {
-      "id": "Web-Displays-Mod",
+      "id": "web-displays-mod",
       "title": "Web Displays Mod",
       "image": "https://daneyzp.github.io/Fandom-Network/screenshots/wd.jpg",
       "tags": "java, structure, 1.12.2",
