@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Fandom Network Dashboard</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  font-family:Segoe UI,sans-serif;
+  min-height:100vh;
+}
+
+.topbar{
+  width:100%;
+  background:#020617;
+  padding:18px;
+  border-bottom:1px solid #1e293b;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+}
+
+.sub{
+  color:#94a3b8;
+  margin-top:5px;
+  font-size:14px;
+}
+
+.container{
+  width:100%;
+  max-width:1000px;
+  margin:auto;
+  padding:25px;
+}
+
+.stats{
+  background:#111827;
+  border:1px solid #1e293b;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:25px;
+}
+
+.stats-title{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.stats-value{
+  font-size:34px;
+  font-weight:700;
+  color:#38bdf8;
+}
+
+.pages-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:#111827;
+  border:1px solid #1e293b;
+  border-radius:18px;
+  padding:20px;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:#38bdf8;
+}
+
+.page-name{
+  font-size:18px;
+  font-weight:700;
+  word-break:break-word;
+}
+
+.page-url{
+  color:#94a3b8;
+  margin-top:10px;
+  font-size:14px;
+  word-break:break-word;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:18px;
+}
+
+.btn{
+  flex:1;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  padding:12px;
+  border-radius:12px;
+  font-weight:600;
+  transition:.2s;
+}
+
+.open-btn{
+  background:#0ea5e9;
+  color:white;
+}
+
+.copy-btn{
+  background:#1e293b;
+  color:white;
+}
+
+.btn:hover{
+  opacity:.9;
+}
+
+.loading{
+  text-align:center;
+  padding:50px;
+  color:#94a3b8;
+}
+
+.empty{
+  background:#111827;
+  border:1px solid #1e293b;
+  border-radius:18px;
+  padding:40px;
+  text-align:center;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+<div class="logo">
+Fandom Network
+</div>
+
+<div class="sub">
+Download Server Dashboard
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stats-title">
+Total Download Pages
+</div>
+
+<div class="stats-value" id="totalPages">
+0
+</div>
+
+</div>
+
+<div id="pagesContainer" class="pages-grid">
+
+<div class="loading">
+Loading pages...
+</div>
+
+</div>
+
+</div>
+
+<script>
+/*
+========================================
+CONFIG
+========================================
+*/
+
+/*
+Set your real download page URL
+*/
+const downloadPage =
+"download.html";
+
+/*
+========================================
+LOAD JSON
+========================================
+*/
+
+async function loadDashboard(){
+
+  try{
+
+    const res =
+    await fetch("download-server.json");
+
+    const json =
+    await res.json();
+
+    const pages =
+    json.pages || [];
+
+    document
+    .getElementById("totalPages")
+    .innerText = pages.length;
+
+    const container =
+    document.getElementById(
+      "pagesContainer"
+    );
+
+    if(pages.length === 0){
+
+      container.innerHTML = `
+      <div class="empty">
+        No download pages found.
+      </div>
+      `;
+
+      return;
+    }
+
+    container.innerHTML = "";
+
+    pages.forEach(page => {
+
+      const pageLink =
+      `${location.origin}/${downloadPage}?page=${page.page_id}`;
+
+      const card =
+      document.createElement("div");
+
+      card.className = "card";
+
+      card.innerHTML = `
+        <div class="page-name">
+          ${page.page_id}
+        </div>
+
+        <div class="page-url">
+          ${pageLink}
+        </div>
+
+        <div class="actions">
+
+          <button class="btn open-btn">
+            Open
+          </button>
+
+          <button class="btn copy-btn">
+            Copy Link
+          </button>
+
+        </div>
+      `;
+
+      /*
+      OPEN BUTTON
+      */
+
+      card
+      .querySelector(".open-btn")
+      .onclick = () => {
+
+        window.open(
+          pageLink,
+          "_blank"
+        );
+
+      };
+
+      /*
+      COPY BUTTON
+      */
+
+      card
+      .querySelector(".copy-btn")
+      .onclick = async () => {
+
+        try{
+
+          await navigator
+          .clipboard
+          .writeText(pageLink);
+
+          const btn =
+          card.querySelector(
+            ".copy-btn"
+          );
+
+          btn.innerText = "Copied!";
+
+          setTimeout(() => {
+
+            btn.innerText =
+            "Copy Link";
+
+          },2000);
+
+        }catch(err){
+
+          alert(
+            "Failed to copy link"
+          );
+
+        }
+
+      };
+
+      container.appendChild(card);
+
+    });
+
+  }catch(err){
+
+    document
+    .getElementById("pagesContainer")
+    .innerHTML = `
+    <div class="empty">
+      Failed to load dashboard.
+    </div>
+    `;
+
+  }
+
+}
+
+/*
+========================================
+START
+========================================
+*/
+
+loadDashboard();
+</script>
+
+</body>
+</html>
