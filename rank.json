@@ -1,0 +1,87 @@
+{
+  "servers": [
+
+    {
+
+      "server_id": "fandom-network-ranks",
+
+      "server_name": "Fandom Network",
+
+      "description": "Apply for Ranks",
+
+      "server_logo": "assets/img/fandom network logo.png",
+
+      "host_email": "daneyroy0@gmail.com",
+
+      "sheet_id": "1b03udLhCY4qCnB-7NXml4jcQxVSlgGR8NF2jLaID9cU",
+
+      "ranks": [
+
+        {
+          "id": "rank1",
+          "name": "VIP",
+          "price": "₹30"
+        },
+
+        {
+          "id": "rank2",
+          "name": "MVP",
+          "price": "₹60"
+        },
+
+        {
+          "id": "rank3",
+          "name": "Elite + Premium Kits",
+          "price": "₹150"
+        },
+
+        {
+          "id": "rank4",
+          "name": "Deadly + Primium Kits",
+          "price": "₹499"
+        }
+
+      ]
+
+    },
+
+    {
+
+      "server_id": "lone-wolf-mc-ranks",
+
+      "server_name": "Lone Wolf MC",
+
+      "description": "SMP Server Rank",
+
+      "server_logo": "https://your-image-url.com/logo2.png",
+
+      "host_email": "lonewolf@gmail.com",
+
+      "sheet_id": "LONEWOLF_SHEET_ID",
+
+      "ranks": [
+
+        {
+          "id": "rank1",
+          "name": "Wolf",
+          "price": "₹49"
+        },
+
+        {
+          "id": "rank2",
+          "name": "Hunter",
+          "price": "₹99"
+        },
+
+        {
+          "id": "rank3",
+          "name": "Alpha",
+          "price": "₹199"
+        }
+
+      ]
+
+    }
+
+  ]
+}
