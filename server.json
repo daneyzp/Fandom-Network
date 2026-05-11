@@ -9,6 +9,14 @@
       "url": "https://daneyzp.github.io/Fandom-Network/server/server1.html",
       "tags": "java, bedrock, survival, 1.21.11, paper"
     }
-   
+   ,{
+      "id": "my-world",
+      "title": "My World",
+      "image": "https://daneyzp.github.io/Fandom-Network/screenshots/mw1.jpg",
+      "ip": "myworld.seedloaf.gg",
+      "port": "25565",
+      "url": "https://daneyzp.github.io/Fandom-Network/server/my-world.html",
+      "tags": "java, survival, 1.21.11, paper"
+    }
   ]
 }
